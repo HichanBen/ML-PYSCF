@@ -1,0 +1,260 @@
+
+\documentclass[quantumrep,review,accept,pdftex,moreauthors]{Definitions/mdpi}
+
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2026}
+\copyrightyear{2026}
+\externaleditor{Firstname Lastname} % More than 1 editor, please add `` and '' before the last editor name
+\datereceived{8 October 2025} 
+\daterevised{3 February 2026} % Comment out if no revised date
+\dateaccepted{4 February 2026} 
+\datepublished{ } 
+%\datecorrected{} % For corrected papers: "Corrected: XXX" date in the original paper.
+%\dateretracted{} % For retracted papers: "Retracted: XXX" date in the original paper.
+\hreflink{https://doi.org/} % If needed use \linebreak
+%\doinum{}
+%\pdfoutput=1 % Uncommented for upload to arXiv.org
+%\CorrStatement{yes}  % For updates
+%\longauthorlist{yes} % For many authors that exceed the left citation part
+%\IsAssociation{yes} % For association journals
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, float, amsmath, amssymb, lineno, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, colortbl, soul, multirow, microtype, tikz, totcount, changepage, attrib, upgreek, array, tabularx, pbox, ragged2e, tocloft, marginnote, marginfix, enotez, amsthm, natbib, hyperref, cleveref, scrextend, url, geometry, newfloat, caption, draftwatermark, seqsplit
+% cleveref: load \crefname definitions after \begin{document}
+
+%=================================================================
+% Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition, Notation, Assumption
+%% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{\highlighting{Reflections} %MDPI: We added the article type based on the one submitted online at susy.mdpi.com, please confirm.
+ on the 2025 Nobel Prize in Physics: Macroscopic Quantum Effects and Future Directions}
+
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0000-0000-000X} % Add \orcidA{} behind the author's name
+%\newcommand{\orcidauthorB}{0000-0000-0000-000X} % Add \orcidB{} behind the author's name
+
+% Authors, for the paper (add full first names)
+\Author{\hl{Hicham. Benamer} %MDPI: 1. Please carefully check the accuracy of names and affiliations. 2. The names highlighted are different from the ones submitted online at susy.mdpi.com. Please confirm which are correct. 3. Please provide the full name of this author if possible. It is recommended that the first and last name are written out in full and only the middle name (if any) is abbreviated. Please try to provide those details in this format.
+}
+
+%\longauthorlist{yes}
+
+% MDPI internal command: Authors, for metadata in PDF
+\AuthorNames{H. Benamer}
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address[1]{%
+\hl{Affiliation; Cadi Ayyad University } %MDPI: Please add the affiliation, including: Department, University/Company…, City post/zip code or equivalent where available, Country.
+ \hl{hishambenamer9@gmail.com}%MDPI: Capitalized email address is not recommended; we changed it to lowercase. Please confirm.
+}
+
+% Contact information of the corresponding author
+%\corres{Correspondence: e-mail@e-mail.com; Tel.: (optional; include country code; if there are multiple corresponding authors, add author initials) +xx-xxxx-xxx-xxxx (F.L.)}
+
+% Current address and/or shared authorship
+%\firstnote{Current address: Affiliation.}  
+% Current address should not be the same as any items in the Affiliation section.
+
+%\secondnote{These authors contributed equally to this work.}
+% The commands \thirdnote{} till \eighthnote{} are available for further notes.
+
+%\simplesumm{} % Simple summary
+
+%\conference{} % An extended version of a conference paper
+
+% Abstract (Do not insert blank lines, i.e. \\) 
+\abstract{In 2025, the Nobel Prize in Physics was awarded to John Clarke, Michel H. Devoret, and John M. Martinis for their discovery of macroscopic quantum mechanical tunneling (MQT) and energy quantization in an electric circuit. Their pioneering experiments from \mbox{1984 to 1985} demonstrated that quantum mechanical phenomena can manifest in macroscopic superconducting circuits, thereby bridging microscopic quantum behavior and engineered devices. This achievement has laid essential groundwork for quantum technologies including quantum sensing and quantum cryptography. This paper reviews the core discoveries, examines the theoretical underpinnings, discusses technological implications, and proposes future challenges and research directions.}
+
+% Keywords
+\keyword {Macroscopic quantum tunneling;
+Josephson junctions; Superconducting qubits; Quantum computing; Circuit quantum electrodynamics; Quantum metrology; Quantum sensing; Schrödinger cat states; Decoherence; Quantum supremacy %MDPI: List three to ten pertinent keywords specific to the article; yet reasonably common within the subject discipline..
+} 
+
+
+\begin{document}
+\section{Introduction}
+The Nobel Prize in Physics 2025 was awarded to John Clarke (University of California, Berkeley), Michel H. Devoret (Yale University and UC Santa Barbara), and John M. Martinis (UC Santa Barbara and Qolab, Los Angeles, CA) ``for the discovery of macroscopic quantum mechanical tunneling (MQT) and energy quantization in an electric circuit''~\cite{Nobel2025}.
+
+These experiments addressed a fundamental question in physics: what is the maximum size of a system that can demonstrate quantum mechanical effects? Conventionally, quantum phenomena are associated with atoms, molecules, and other microscopic systems. As soon as large numbers of particles are involved, quantum effects typically become insignificant, and classical physics takes over. The laureates' groundbreaking work demonstrated that carefully engineered macroscopic circuits can indeed exhibit quintessentially quantum behavior, thereby bridging the gap between microscopic quantum mechanics and macroscopic electronic devices.
+
+\section{Scientific Background}
+
+\subsection{Josephson Junctions and Superconductivity}
+
+Superconductivity, discovered by Heike Kamerlingh Onnes in 1911, is a quantum phenomenon wherein certain materials exhibit exactly zero electrical resistance below a critical temperature. The microscopic theory, developed by Bardeen, Cooper, and Schrieffer in 1957 (awarded the Nobel Prize in 1972), explains this behavior through the formation of Cooper pairs---bound states of two electrons with opposite momenta and spins. These fermionic pairs form composite bosons, and the BCS ground state can be understood as a macroscopic Bose--Einstein condensate of Cooper pairs, described by a complex order parameter that acts as an effective wavefunction for the center of mass of the condensate.
+
+A Josephson junction consists of two superconductors separated by a thin insulating barrier.
+Brian Josephson predicted in 1962 (awarded the Nobel Prize in 1973) that Cooper pairs could tunnel without resistance through this \hl{barrier}%MDPI: 1. Please check again whether the format of all variables or letters in the full text needs to be consistent with that in the formula (such as italic, bold, and etc.). If necessary, please modify the full text. 2. We reorder the citation of reference in the main text, please check all.
+~\cite{Josephson1962}:
+\begin{align}
+I &= I_0 \sin(\delta), \\
+\dot{\delta} &= \frac{2eV}{\hbar},
+\end{align}
+where $I$ is the current, $I_0$ is the critical current, $\delta$ is the macroscopic phase difference of the order parameter across the junction (the same for all Cooper pairs), $V$ is the voltage, $e$ is the elementary charge, and $\hbar$ is the reduced Planck constant. The first (DC) equation relates current to phase, while the second (AC) equation gives the time evolution of the phase.
+
+The Josephson effect was experimentally confirmed at Bell Labs in 1963. By 1964, the Superconducting Quantum Interference Device (SQUID) was developed at Ford Research Labs, demonstrating the power of Josephson junctions for ultra-sensitive magnetometry. These junctions now serve as fundamental building blocks for superconducting qubits in quantum computers.
+
+\subsection{Quantum Tunneling in Macroscopic Circuits}
+
+Quantum tunneling, predicted soon after Schrödinger's equation in 1926, allows particles to penetrate classically forbidden regions where the total energy is lower than the potential energy. Early successes included explaining alpha decay and fusion in the Sun. The 1973 Nobel Prize recognized electron tunneling in semiconductors (Esaki) and superconductors (Giaever).
+
+The fundamental question addressed by this year's laureates: could quantum tunneling occur in a macroscopic system comprising billions of particles? In 1978, Anthony Leggett (Nobel Prize 2003) suggested that macroscopic quantum tunneling (MQT) might be observable in superconducting circuits at millikelvin temperatures, exploiting their very low resistance and weak coupling to dissipative environmental modes~\cite{Leggett1978}.
+
+Leggett initially considered SQUID loops, but the physics could be realized more simply in a current-biased Josephson junction. Including the capacitance current for time-dependent voltage, the junction equation becomes
+\begin{equation}
+I = I_0 \sin\delta + \frac{\hbar}{2e} C\ddot{\delta}.
+\end{equation}
+
+This can be interpreted as Newton's equation for a fictitious particle with coordinate $\delta$ and effective mass proportional to capacitance $C$. The conservative force yields the ``tilted washboard potential'':
+\begin{equation}
+    U(\delta) = -E_J \left[\cos\delta + \frac{I}{I_0}\delta\right].
+\end{equation}
+
+For bias current $I < I_0$, the potential has metastable local minima where the system is trapped with zero voltage ($V \propto \dot{\delta} = 0$). Raising $I > I_0$ forces the particle into a running state with finite voltage. At zero temperature, a classical particle would remain trapped forever, while a quantum particle can tunnel through the barrier and escape~\cite{Leggett1978,Caldeira1981}.
+This macroscopic quantum tunneling (MQT) out of the metastable well provides a direct signature of quantized energy levels in the circuit and was conclusively observed through the temperature-independent switching rate from the superconducting to the resistive state at very low temperatures~\cite{Josephson1962}.
+\section{Experimental Demonstrations}
+
+The decisive experiments were conducted at UC Berkeley between 1984 and 1985 by John Clarke (faculty), John Martinis (senior PhD student), and Michel Devoret (postdoc from CEA Saclay, France). Their work definitively demonstrated both macroscopic quantum tunneling and energy quantization beyond reasonable doubt.
+
+\textbf{\hl{Eliminating Excess Noise:}%MDPI: Please confirm if the bold formatting is necessary; if not, please remove it. The following highlights are the same.
+} Previous experiments in the early 1980s had observed saturation of escape current distributions at low temperatures, but this could be explained by non-equilibrium excess noise (e.g., microwave blackbody radiation) rather than genuine quantum effects. The Berkeley team addressed this critical challenge through meticulous design. To suppress thermal fluctuations and minimize environmental coupling through filtering, it was essential to operate at millikelvin temperatures where $k_B T$ is much smaller than the relevant energy scales of the system.
+
+\textbf{\hl{Advanced Filtering:}} They implemented a carefully engineered filter chain providing over 200 dB of damping across the frequency range 0.1--12 GHz, using newly developed copper powder microwave filters. Proper thermal anchoring at different cryostat temperature stages was crucial to eliminate blackbody radiation from the filters themselves.
+
+\textbf{\hl{Resonant Activation Technique:}} A key innovation was incorporating a weakly coupled microwave control line for resonant activation. This allowed \hl{in situ} %MDPI: We removed the italic, please confirm.
+ determination of the junction's plasma frequency (the resonant frequency of the particle in the classical regime). The activated resonance width characterized the damping resistance. Combined with direct measurement of critical current $I_0$, all theoretical input parameters could be independently determined---\textit{\hl{no fitting parameters were used}%MDPI: Please confirm if the italics are necessary; if not, please remove them. The following highlights are the same.
+}.
+
+\textbf{\hl{Quantitative Confirmation of MQT:}} By measuring escape rates below the crossover temperature, they achieved quantitative agreement with Caldeira--Leggett theory predictions~\cite{Caldeira1981,Devoret1985}. They even measured a ``classical junction'' (with critical current suppressed by magnetic field) to verify that the sample was indeed cooled below the crossover temperature of the quantum junction.
+
+\textbf{\hl{Energy Quantization Spectroscopy:}} Using microwave spectroscopy at $f = 2$ GHz while varying bias current, they observed tunneling from the first, second, and third excited states of the potential well~\cite{Martinis1985}. The excitation energies agreed perfectly with single-particle quantum mechanical calculations. According to the WKB approximation, excited states see a thinner barrier and escape faster than the ground state. This spectroscopic measurement demonstrated that the macroscopic degree of freedom $\delta$ (representing the collective phase of all Cooper pairs) behaves as a quantized single quantum mechanical particle. As Clarke and colleagues noted, they had created a ``macroscopic nucleus'' in a circuit ``big enough to get one's grubby fingers on''~\cite{Clarke1988}.
+
+\section{Theoretical Interpretation}
+
+The theoretical framework combines quantum mechanics with circuit theory. The Josephson junction can be described by a Hamiltonian for the macroscopic phase degree of freedom in the presence of a bias current $I$:
+\begin{equation}
+H = \frac{Q^2}{2C} - E_J \left[\cos\delta + \frac{I}{I_0}\delta\right],
+\end{equation}
+where $Q$ is the charge conjugate to $\delta$, $C$ is capacitance, and $E_J = \hbar I_0/(2e)$ is the Josephson energy. This describes a quantum particle in the tilted washboard potential.
+
+\textbf{\hl{Schrödinger Cat States:}} A remarkable feature is the nature of the macroscopic quantum state. In ordinary Bose--Einstein condensates, $N$ particles occupy a product state where measuring one particle leaves others unchanged. However, the Josephson junction can support ``cat states''---coherent superpositions of macroscopically distinct states:
+\begin{equation}
+\Psi(x_1, x_2, \ldots, x_N) \propto \Psi_L(x_1)\Psi_L(x_2)\cdots\Psi_L(x_N) + \Psi_D(x_1)\Psi_D(x_2)\cdots\Psi_D(x_N),
+\end{equation}
+where $L$ and $D$ denote two macroscopically different states (analogous to Schrödinger's living and dead cat). Measuring any single particle collapses the superposition for \textit{\hl{all}} particles. The phase difference $\delta$ is shared by all Cooper pairs in the junction, making this truly a macroscopic quantum variable~\cite{Clarke1988}.
+
+\textbf{\hl{Environmental Coupling and Decoherence:}} Real circuits interact with electromagnetic modes, thermal noise, and environmental degrees of freedom, causing decoherence. Caldeira and Leggett (1981) investigated how weak coupling to a dissipative environment affects tunneling rates. The damping resistance $R$ models this dissipation and must be characterized to predict MQT rates quantitatively~\cite{Caldeira1981}.
+
+The success of the Berkeley experiments depended on independent characterization of all junction parameters ($I_0$, $C$, $R$), allowing parameter-free comparison with theory.
+
+\section{Implications and Applications}
+
+The discoveries recognized by the 2025 Nobel Prize have profound implications across physics and technology:
+
+\textbf{\hl{Quantum Computing:}} The laureates' work established superconducting circuits as a viable platform for quantum information processing. In 1999, Nakamura, Pashkin, and Tsai at NEC demonstrated the first coherent oscillations in a single Cooper pair box (lasting only 3 ns)~\cite{Nakamura1999}. This inspired numerous new designs. The phase qubit, based directly on the current-biased Josephson junction, used MQT for readout---the same mechanism as the 1985 experiments.
+
+A major breakthrough was circuit Quantum Electrodynamics (cQED) developed in 2004~\cite{Wallraff2004}, where the qubit couples strongly to a microwave resonator. This enabled dramatic improvements in coherence times and high-fidelity quantum non-demolition readout. The Transmon qubit design (2007)~\cite{Koch2007}, insensitive to charge noise, is now used worldwide in efforts to build large-scale quantum computers by IBM, Google, Rigetti, IQM, and others. Modern processors contain tens to hundreds of superconducting qubits, with demonstrations including quantum supremacy and error correction.
+
+\textbf{\hl{Quantum Sensing and Metrology:}} SQUIDs based on Josephson junctions remain the most sensitive magnetometers available, with applications in medical imaging (magnetoencephalography), geophysics, and materials characterization. Quantum-limited amplifiers and single-photon detectors push measurement precision to fundamental limits.
+
+\textbf{\hl{Quantum Optics with Artificial Atoms:}} Superconducting circuits enable quantum optics in parameter regimes inaccessible to atomic physics. Josephson junctions act as engineered artificial atoms, allowing exploration of light--matter interactions in new ways.
+
+\textbf{\hl{Hybrid Quantum Systems:}} Superconducting circuits probe the quantum nature of other macroscopic systems including micromechanical resonators (quantum ground state control achieved in 2010) and large spin ensembles. Recently, superconducting circuits in a 30 m cryostat enabled loophole-free violation of Bell's inequality (2023), building upon the pioneering work on entangled photons that was recognized by the 2022 Nobel Prize in \hl{Physics}%MDPI: There is no citation of ref. 12 in the main text, please add.
+~\cite{Nobel2022}, demonstrating the historical progression and continued impact of quantum entanglement experiments.
+
+\textbf{\hl{Fundamental Physics:}} These experiments provide testing grounds for quantum mechanics in the mesoscopic-to-macroscopic transition, investigating decoherence, quantum measurement, and environmental interactions. As the Nobel Committee noted, ``century-old quantum mechanics continually offers new surprises'' and is ``the foundation of all digital technology''~\cite{Nobel2025}.
+
+\section{Challenges and Future Directions}
+
+Despite tremendous progress, significant challenges remain:
+
+\textbf{\hl{Scalability:}} Current quantum processors have limited numbers of qubits. Scaling to thousands or millions of qubits necessary for fault-tolerant quantum computation requires advances in fabrication, control electronics, and architectural design. Maintaining coherence and minimizing crosstalk in large arrays is extremely challenging.
+
+\textbf{\hl{Coherence Times:}} While coherence times in superconducting qubits have improved dramatically (from nanoseconds to hundreds of microseconds), they remain short compared to the duration of complex algorithms. Further improvements require reducing sources of decoherence including material defects, quasiparticles, and radiation.
+
+\textbf{\hl{Error Correction:}} Quantum error correction is essential for practical quantum computation. Implementing error-correcting codes requires many physical qubits per logical qubit and fast, high-fidelity operations. Recent demonstrations of quantum error correction are promising but much work remains.
+
+\textbf{\hl{Interfacing with Other Modalities:}} Hybrid quantum systems combining superconducting circuits with other platforms (trapped ions, spin qubits, photonic systems) may leverage complementary strengths. Developing efficient quantum transducers is an active research area.
+
+\textbf{\hl{Materials and Fabrication:}} Improving qubit coherence requires understanding and mitigating materials-level defects. Research into new superconducting materials, dielectrics, and fabrication techniques continues. Identifying and eliminating sources of two-level systems and other noise is crucial.
+
+\textbf{\hl{Cryogenic Infrastructure:}} Operating at millikelvin temperatures requires expensive dilution refrigerators. Developing qubits that operate at higher temperatures, or more efficient cooling technologies, would significantly impact scalability and accessibility.
+
+\textbf{\hl{Theoretical Understanding:}} Deeper understanding of decoherence mechanisms, optimal control strategies, and the fundamental limits of quantum information processing in solid-state systems will guide future experimental efforts.
+
+\section{Conclusions}
+
+The 2025 Nobel Prize in Physics celebrates a remarkable experimental achievement that demonstrated quantum mechanical phenomena in macroscopic circuits. John Clarke, Michel H. Devoret, and John M. Martinis showed that quantum tunneling and energy quantization are not confined to the microscopic world but can be observed in macroscopic devices when properly engineered. This work has been instrumental in the development of superconducting quantum technologies that are now at the forefront of quantum computing and sensing.
+
+This Nobel Prize not only recognizes a spectacular experimental feat but also marks a turning point where quantum mechanics increasingly merges with engineering. The transition from fundamental physics demonstrations to functional quantum devices exemplifies the interplay between curiosity-driven research and technological innovation. Future advances will depend on bridging fundamental quantum behavior with robust, scalable devices capable of solving real-world problems. The journey from laboratory curiosities to practical quantum computers and sensors continues, building on the solid foundation established by the \hl{2025 laureates.} %MDPI: Please add the following Funding, Data Availability Statement and Conflicts of Interest parts.
+\clearpage
+
+\vspace{6pt}
+\funding{\hl{~}}%MDPI: Please add: ``This research received no external funding'' or ``This research was funded by NAME OF FUNDER grant number XXX.'' and and ``The APC was funded by XXX''. Check carefully that the details given are accurate and use the standard spelling of funding agency names at \url{https://search.crossref.org/funding}, any errors may affect your future funding.
+\dataavailability{\hl{~}}%MDPI: We encourage all authors of articles published in MDPI journals to share their research data. In this section, please provide details regarding where data supporting reported results can be found, including links to publicly archived datasets analyzed or generated during the study. Where no new data were created, or where data is unavailable due to privacy or ethical restrictions, a statement is still required. Suggested Data Availability Statements are available in section ``MDPI Research Data Policies'' at \url{https://www.mdpi.com/ethics}.
+\conflictsofinterest{\hl{~}}%MDPI: Declare conflicts of interest or state ``The authors declare no conflicts of interest.'' Authors must identify and declare any personal circumstances or interest that may be perceived as inappropriately influencing the representation or interpretation of reported research results. Any role of the funders in the design of the study; in the collection, analyses or interpretation of data; in the writing of the manuscript; or in the decision to publish the results must be declared in this section. If there is no role, please state ``The funders had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript; or in the decision to publish the results''.
+
+\begin{adjustwidth}{-\extralength}{0cm}
+%} % If the paper is ``preprints'', please uncomment this parenthesis.
+%\printendnotes[custom] % Un-comment to print a list of endnotes
+
+\reftitle{References}
+
+%\bibliographystyle{unsrt}
+\begin{thebibliography}{999}
+\bibitem{Nobel2025}
+The Royal Swedish Academy of Sciences. The Nobel Prize in Physics 2025. \hl{NobelPrize.org.} %MDPI:  Can we remove it, please confirm.
+ Available online: \url{https://www.nobelprize.org/prizes/physics/2025/} (accessed on 7 October 2025).
+
+\bibitem{Josephson1962}
+Josephson, B.D. Possible New Effects in Superconductive Tunneling. \textit{Phys. Lett.} \textbf{1962}, \emph{1}, 251.
+
+\bibitem{Leggett1978}
+Leggett, A.J. Prospects in Ultralow Temperature Physics. \textit{J. Phys. Colloq.} \textbf{1978}, \emph{39}, C6-1264.
+
+\bibitem{Caldeira1981}
+Caldeira, A.O.; Leggett, A.J. Influence of Dissipation on Quantum Tunneling in Macroscopic Systems. \textit{Phys. Rev. Lett.} \textbf{1981}, \emph{46},~211.
+
+\bibitem{Devoret1985}
+Devoret, M.H.; Martinis, J.M.; Clarke, J. Measurement of Macroscopic Quantum Tunneling out of a Zero-Voltage State of a Current-Biased Josephson Junction. \textit{Phys. Rev. Lett.} \textbf{1985}, \emph{55}, 1908.
+
+\bibitem{Martinis1985}
+Martinis, J.M.; Devoret, M.H.; Clarke, J. Energy-Level Quantization in the Zero-Voltage State of a Current-Biased Josephson Junction. \textit{Phys. Rev. Lett.} \textbf{1985}, \emph{55}, 1543.
+
+\bibitem{Clarke1988}
+Clarke, J.; Cleland, A.N.; Devoret, M.H.; Esteve, D.; Martinis, J.M. Quantum Mechanics of a Macroscopic Variable: The Phase Difference of a Josephson Junction. \textit{Science} \textbf{1988}, \emph{239}, 992.
+
+\bibitem{Nakamura1999}
+Nakamura, Y.; Pashkin, Y.A.; Tsai, J.S. Coherent control of macroscopic quantum states in a single Cooper pair box. \textit{Nature} \textbf{1999}, \emph{398}, 786.
+
+\bibitem{Wallraff2004}
+Wallraff, A.; Schuster, D.I.; Blais, A.; Frunzio, L.; Huang, R.-S.; Majer, J.; Kumar, S.; Girvin, S.M.; Schoelkopf, R.J. Strong coupling of a single photon to a superconducting qubit using circuit quantum electrodynamics. \textit{Nature} \textbf{2004}, \emph{431}, 162.
+
+\bibitem{Koch2007}
+Koch, J.; Yu, T.M.; Gambetta, J.; Houck, A.A.; Schuster, D.I.; Majer, J.; Blais, A.; Devoret, M.H.; Girvin, S.M.; Schoelkopf, R.J. Charge-insensitive qubit design derived from the Cooper pair box. \textit{Phys. Rev. A} \textbf{2007}, \emph{76}, 042319.
+
+\bibitem{Nobel2022}
+The Royal Swedish Academy of Sciences. The Nobel Prize in Physics 2022. \hl{NobelPrize.org.} %MDPI: Can we remove it, please confirm.
+ Available online: \url{https://www.nobelprize.org/prizes/physics/2022/} (accessed on \hl{October} %MDPI: Please provide full date.
+ 2025).
+
+\bibitem{Devoret1984}
+\hl{Devoret, M.H.; Martinis, J.M.; Esteve, D.; Clarke, J.} %MDPI: There is no citation in the main text, please add in the paper.
+ Resonant Activation from the Zero-Voltage State of a Current-Biased Josephson Junction. \textit{Phys. Rev. Lett.} \textbf{1984}, \emph{53}, 1260.
+
+\end{thebibliography}
+\PublishersNote{}
+%\isPreprints{}{% This command is only used for ``preprints''.
+\end{adjustwidth}
+\end{document}
+
+
+
